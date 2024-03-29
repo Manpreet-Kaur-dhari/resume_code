@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="css/responsive.css"> <!-- Add a separate CSS file for responsive styles -->
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <title>Manpreet Kaur - SOC Analyst Intern Resume</title>
+</head>
+
+<body>
+    <header>
+        <div id="userImageContainer">
+            <img src="img.png" alt="User Image" id="userImage">
+        </div>
+        <div class="container">
+            <h1>Manpreet Kaur</h1>
+            <p>SOC Analyst Intern</p>
+        </div>
+    </header>
+
+    <div id="resumeContainer">
+        <div class="container">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Enthusiastic and dedicated cybersecurity professional with a post-graduation in cybersecurity
+                    from Bow Valley School in 2024. Currently working as a SOC Analyst Intern at Bow Valley School,
+                    Canada.</p>
+            </section>
+
+            <section id="experience">
+                <h2>Work Experience</h2>
+                <div class="job">
+                    <h3>SOC Analyst Intern</h3>
+                    <p>Bow Valley School - Canada</p>
+                    <p>2024 - Present</p>
+                    <ul>
+                        <li>Monitoring and analyzing security alerts to identify and respond to potential threats.</li>
+                        <li>Collaborating with team members to implement and maintain effective security measures.</li>
+                    </ul>
+                </div>
+                <!-- Add more job sections as needed -->
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="degree">
+                    <h3>Post-Graduation in Cybersecurity</h3>
+                    <p>Bow Valley School - Canada</p>
+                    <p>Expected Graduation: 2024</p>
+                </div>
+                <!-- Add more education sections as needed -->
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Network Security</li>
+                    <li>Incident Response</li>
+                    <li>SIEM Tools</li>
+                    <!-- Add more skills as needed -->
+                </ul>
+            </section>
+            
+            <!-- ... (previous code) ... -->
+
+            <section id="contact" class="animated slideUp">
+                <h2>Contact Information</h2>
+                <p>Email: m.kaur425@mybvc.ca</p>
+                <p>Phone: 825-343-3876</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/manpreet-kaur-743340192/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+            </section>
+
+            <!-- ... (remaining code) ... -->
+
+            <button id="downloadButton">Download PDF</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Contact: m.kaur425@mybvc.ca</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- Add this line to include html2pdf library -->
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+    <!-- Add this script section at the end of your HTML -->
+    <script>
+        // script.js
+        document.getElementById('downloadButton').addEventListener('click', downloadResume);
+
+        function downloadResume() {
+            var element = document.getElementById('resumeContainer');
+            html2pdf(element);
+        }
+    </script>
+</body>
+
+</html>
